@@ -121,6 +121,18 @@ h3 {
         left: 0;
     }
 }
+/*Main*/
+.contenedor-main{
+        max-width: 120rem;
+        /*el max-width es para que tome como valor maximo el que le pasamos, caso contrario tome el 100%*/
+        margin: 0 auto;
+}
+.sombra-main{
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.48);
+    background-color: var(--blanco);
+    border-radius: 3rem;
+    padding: 2rem;
+}
 /*Section Foto de perfil*/
 @media (max-width: 768px){
     .introduccion{
@@ -129,14 +141,22 @@ h3 {
 }
 .introduccion{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     margin-top: 15rem;
     margin-bottom: 3rem;
     width: 100%;
+    border: solid red;
 }
 .fotomia{
     width: 30%;
     border: solid black;
     border-radius: 50rem;
+    margin-right: 5rem;
+}
+.pequeñaDescripcion{
+    font-size: 2.4rem;
+    width: 50%;
+    text-transform: uppercase;
+    text-align: justify;
 }
