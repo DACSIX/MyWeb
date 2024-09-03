@@ -146,17 +146,23 @@ h3 {
     margin-top: 15rem;
     margin-bottom: 3rem;
     width: 100%;
-    border: solid red;
 }
 .fotomia{
     width: 30%;
     border: solid black;
     border-radius: 50rem;
     margin-right: 5rem;
+    margin-left: 10rem;
 }
 .pequeñaDescripcion{
     font-size: 2.4rem;
     width: 50%;
     text-transform: uppercase;
     text-align: justify;
+}
+.ubicacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
