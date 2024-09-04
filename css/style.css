@@ -1,27 +1,29 @@
-:root{
+:root {
     /*Colores de mi Web Site*/
     --principal: #9E9E9E;
     --blanco: #ffff;
-    --grisclaro:#ECEFF1;
+    --grisclaro: #ECEFF1;
     --grisoscuro: #5D6D7E;
 }
-*{
-    margin:0;
+
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
-body{
+body {
     font-size: 16px;
     background-image: linear-gradient(to top, var(--grisclaro) 0%, var(#05e2ff) 100%);
     font-family: "New Amsterdam", sans-serif;
     font-weight: none;
 }
+
 /*Definimos unas reglas tipograficas para h1,h3,h2*/
 h1 {
     font-size: 3.8rem;
@@ -33,24 +35,30 @@ h2 {
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
 }
-h1,h2,h3{
+
+h1,
+h2,
+h3 {
     text-align: center;
+    text-transform: uppercase;
 }
 
 /*Header*/
-.titulo{
+.titulo {
     font-size: 2rem;
-    position: fixed; /*para que la posicion dependa de la ventana*/
+    position: fixed;
+    /*para que la posicion dependa de la ventana*/
     width: 100%;
     height: 3rem;
     left: 0;
     top: 0;
     background-color: var(--blanco);
 }
+
 /*Contenedor encabezado*/
-.contenedor-encabezado{
+.contenedor-encabezado {
     width: 100%;
     height: 8rem;
     margin-top: 3rem;
@@ -59,8 +67,10 @@ h1,h2,h3{
     left: 0;
     background-color: var(--principal);
 }
-.contenedor-encabezado-contenido{
-    max-width: 992px; /*Available Breakpoints:
+
+.contenedor-encabezado-contenido {
+    max-width: 992px;
+    /*Available Breakpoints:
     Estos breakpoints se basan principalmente en anchos mínimos de viewports
     y nos permiten aumentar la escala de los elementos a medida que cambia la ventana gráfica.*/
     margin: 0 auto;
@@ -69,19 +79,23 @@ h1,h2,h3{
     justify-content: space-between;
     align-items: center;
 }
-.navegacion{
+
+.navegacion {
     /*ver como acomodar para que no se me meuevan los elemenots con la transicion de la barra de navegacion*/
     width: 80%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.navegacion a:hover, .active{
+
+.navegacion a:hover,
+.active {
     background-color: var(--grisoscuro);
     transform: scale(1.5);
-    transition:  .3s;
+    transition: .3s;
 }
-.navegacion a{
+
+.navegacion a {
     margin-right: 4rem;
     font-size: 1.8rem;
     color: var(--blanco);
@@ -89,22 +103,26 @@ h1,h2,h3{
     padding: 1rem;
     border-radius: 3rem;
 }
-.logo{
+
+.logo {
     width: 7rem;
     border-radius: 5rem;
 }
-.checkbtn{
+
+.checkbtn {
     font-size: 3rem;
     color: var(--blanco);
     display: none;
     margin-right: 1rem;
     cursor: pointer;
 }
-#check{
+
+#check {
     display: none;
 }
-@media (max-width: 520px){
-    .navegacion{
+
+@media (max-width: 520px) {
+    .navegacion {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -117,28 +135,33 @@ h1,h2,h3{
         width: 100%;
         height: 50%;
     }
-    .checkbtn{
+
+    .checkbtn {
         display: block;
     }
-    #check:checked~.navegacion{
+
+    #check:checked~.navegacion {
         left: 0;
     }
 }
+
 /*Main*/
-.contenedor-main{
-        max-width: 120rem;
-        /*el max-width es para que tome como valor maximo el que le pasamos, caso contrario tome el 100%*/
-        margin: 0 auto;
+.contenedor-main {
+    max-width: 120rem;
+    /*el max-width es para que tome como valor maximo el que le pasamos, caso contrario tome el 100%*/
+    margin: 0 auto;
 }
-.sombra-main{
+
+.sombra-main {
     box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.48);
     background-color: var(--blanco);
     border-radius: 3rem;
     padding: 2rem;
 }
+
 /*Section Foto de perfil*/
 
-.introduccion{
+.introduccion {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,45 +169,70 @@ h1,h2,h3{
     margin-bottom: 3rem;
     width: 100%;
 }
-.fotomia{
+
+.fotomia {
     width: 30rem;
     border: solid black;
     border-radius: 50rem;
     margin-right: 5rem;
     margin-left: 10rem;
 }
-.pequeñaDescripcion{
+
+.pequeñaDescripcion {
     font-size: 2.4rem;
     width: 50%;
     text-transform: uppercase;
     text-align: justify;
 }
-.ubicacion{
+
+.ubicacion {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
 }
-@media (max-width: 768px){
-    .introduccion{
-       flex-direction: column;
+
+@media (max-width: 768px) {
+    .introduccion {
+        flex-direction: column;
     }
-    .fotomia{
-       margin: auto;
-       margin-bottom: 2rem;
-        
+
+    .fotomia {
+        margin: auto;
+        margin-bottom: 2rem;
+
     }
 }
+
 /*Sobre mi*/
-.titulo-sobremi{
+.titulo-sobremi {
     margin-top: 10rem;
     grid-column: 1/3;
 }
-.sobremi{
+
+.sobremi {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
-@media (min-width: 400){
-    
+
+@media (max-width: 400px) {
+    .sobremi{
+        grid-template-columns: 1fr;
+    }
+    .titulo-sobremi{
+        grid-column: 1/2;
+    }
+}
+
+/*Mis proyectos*/
+.MisProyectos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.proyecto{
+    width: 30rem;
 }
