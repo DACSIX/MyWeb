@@ -207,32 +207,69 @@ h3 {
 /*Sobre mi*/
 .titulo-sobremi {
     margin-top: 10rem;
-    grid-column: 1/3;
+    grid-area: sobreMi;
 }
 
 .sobremi {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "sobreMi sobreMi"
+    "misProyectos misPasiones"
+    "misEstudios misConocimientos"
+    ;
     gap: 2rem;
 }
 
-@media (max-width: 400px) {
-    .sobremi{
-        grid-template-columns: 1fr;
+@media (max-width: 520px) {
+    .sobremi {
+        grid-template-areas:
+        "sobreMi"
+        "misProyectos"
+        "misPasiones"
+        "misEstudios"
+        "misConocimientos";
     }
-    .titulo-sobremi{
-        grid-column: 1/2;
-    }
+    
 }
 
 /*Mis proyectos*/
-.MisProyectos{
+.MisProyectos {
+    grid-area: misProyectos;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 3rem;
 }
-.proyecto{
+
+.proyecto {
     width: 30rem;
+    border: solid black;
 }
+
+.sobremi-misproyectos_lista{
+    display: flex;
+    width: 100%;
+}
+.sobremi-misproyectos_lista ul{
+    margin-left: 1rem;
+}
+/*Mis Pasiones*/
+.MisPasiones{
+    grid-area: misPasiones;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.MisPasiones-imagen{
+    width: 30rem;
+    border-radius: 1rem;
+}
+/*MisEstudios*/
+.misEstudios{
+    grid-area: misEstudios;
+}
+.misConocimientos{
+    grid-area: misConocimientos;
+}
+/*Cuadrar grid*/
