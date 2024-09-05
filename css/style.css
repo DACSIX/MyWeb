@@ -214,6 +214,10 @@ p{
     gap: 2rem;
 }
 
+.location{
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .introduccion {
         flex-direction: column;
