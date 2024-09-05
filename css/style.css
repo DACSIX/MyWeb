@@ -48,6 +48,12 @@ h3 {
 p{
     width: 50rem;
 }
+@media (max-width: 400px){
+    p{
+        width: 30rem;
+    }
+}
+
 /*Global*/
 .Griya-contenedor_estilo{
     display: flex;
@@ -186,7 +192,7 @@ p{
     justify-content: center;
     align-items: center;
     margin-top: 15rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     width: 100%;
 }
 
@@ -226,12 +232,13 @@ p{
 
 /*Sobre mi*/
 .titulo-sobremi {
-    margin-top: 10rem;
+    margin-top: 5rem;
     grid-area: sobreMi;
 }
 
 .sobremi {
     display: grid;
+    width: 100%;
     grid-template-areas: 
     "sobreMi sobreMi"
     "misProyectos misPasiones"
@@ -264,6 +271,7 @@ p{
 
 .sobremi-misproyectos_lista{
     display: flex;
+    justify-content: center;
     width: 100%;
 }
 .sobremi-misproyectos_lista ul{
