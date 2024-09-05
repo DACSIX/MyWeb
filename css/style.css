@@ -276,3 +276,30 @@ h3 {
 .misConocimientos{
     grid-area: misConocimientos;
 }
+/*Redes sociales*/
+.RedesSociales{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+    width: 100%;
+}
+.RedesSociales-contenedor{
+    width: 50rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 3rem;
+}
+.iconos{
+    width: 8rem;
+}
+@media (max-width: 400px){
+    .RedesSociales-contenedor{
+        justify-content: center;
+    }
+    .iconos:nth-child(1),.iconos:nth-child(2){ /*Seleccionamos los elementos que queremos aplicarles los estilos*/
+        margin-right: 2rem;
+    }
+}
