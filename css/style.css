@@ -99,8 +99,7 @@ h3 {
     align-items: center;
 }
 
-.navegacion a:hover,
-.active {
+.navegacion a:hover{
     background-color: var(--grisoscuro);
     transform: scale(1.5);
     transition: .3s;
