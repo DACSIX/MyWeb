@@ -27,7 +27,6 @@ body {
 /*Definimos unas reglas tipograficas para h1,h3,h2*/
 h1 {
     font-size: 3.8rem;
-    text-align: center;
 }
 
 h2 {
@@ -43,8 +42,20 @@ h2,
 h3 {
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 1rem;
 }
-
+/*Global*/
+.Griya-contenedor_estilo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.Griya-imagenes{
+    width: 30rem;
+    border-radius: 5rem;
+    border: solid var(--principal) .4rem;
+}
 /*Header*/
 .titulo {
     font-size: 2rem;
@@ -217,10 +228,10 @@ h3 {
     "misProyectos misPasiones"
     "misEstudios misConocimientos"
     ;
-    gap: 2rem;
+    gap: 3rem;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 768px) {
     .sobremi {
         grid-template-areas:
         "sobreMi"
@@ -235,10 +246,6 @@ h3 {
 /*Mis proyectos*/
 .MisProyectos {
     grid-area: misProyectos;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .proyecto {
@@ -256,20 +263,16 @@ h3 {
 /*Mis Pasiones*/
 .MisPasiones{
     grid-area: misPasiones;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
 }
-.MisPasiones-imagen{
+.Mispasiones-imagen{
     width: 30rem;
-    border-radius: 1rem;
 }
+
 /*MisEstudios*/
 .misEstudios{
     grid-area: misEstudios;
 }
+/*Mis conocimentos*/
 .misConocimientos{
     grid-area: misConocimientos;
 }
-/*Cuadrar grid*/
