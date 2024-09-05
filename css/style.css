@@ -4,6 +4,7 @@
     --blanco: #ffff;
     --grisclaro: #ECEFF1;
     --grisoscuro: #5D6D7E;
+    --cafe: #795548;
 }
 
 * {
@@ -44,6 +45,9 @@ h3 {
     text-transform: uppercase;
     margin-bottom: 1rem;
 }
+p{
+    width: 50rem;
+}
 /*Global*/
 .Griya-contenedor_estilo{
     display: flex;
@@ -55,6 +59,12 @@ h3 {
     width: 30rem;
     border-radius: 5rem;
     border: solid var(--principal) .4rem;
+}
+.negrita{
+    color: var(--cafe);
+}
+.ajustar-texto{
+    font-weight: no;
 }
 /*Header*/
 .titulo {
